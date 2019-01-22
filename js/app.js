@@ -150,7 +150,6 @@ function deleteTodoFromStorage(id) {
     return removedTask;
  }
 
-
 /**
  * 
  * @param {String} id 
@@ -163,7 +162,6 @@ function checkId(id) {
 
     return { error: false, msg: '' };
 }
-
 
 // View functions
 
@@ -257,7 +255,11 @@ function editTaskStorage(id, title, text) {
     return todosStorage.todos;
 }
 
-
+/**
+ *
+ * @param id
+ * @return {*}
+ */
 function setFormtoEdit(id) {
     const checkIdRes = checkId(id);
     if (checkIdRes.error) return console.log(checkIdRes.msg);
